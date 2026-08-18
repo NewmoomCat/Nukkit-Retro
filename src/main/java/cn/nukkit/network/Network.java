@@ -149,7 +149,7 @@ public class Network {
 
     public void processBatch(BatchPacket packet, Player player) {
         if (Nukkit.DEBUG > 0) {
-            this.server.getLogger().info("[processBatch] packet.payload.length=" + (packet.payload != null ? packet.payload.length : "null")
+            this.server.getLogger().debug("[processBatch] packet.payload.length=" + (packet.payload != null ? packet.payload.length : "null")
                     + " protocol=" + packet.protocol
                     + (player != null ? " player.protocol=" + player.protocol : ""));
         }
@@ -166,7 +166,7 @@ public class Network {
 
         int len = data.length;
         if (Nukkit.DEBUG > 0) {
-            this.server.getLogger().info("[processBatch] Inflated data length=" + len
+            this.server.getLogger().debug("[processBatch] Inflated data length=" + len
                     + " head=0x" + Binary.bytesToHexString(Binary.subBytes(data, 0, Math.min(len, 16))));
         }
         @SupportedProtocol int protocol = packet.protocol != Integer.MAX_VALUE ? packet.protocol : (player == null ? ProtocolInfo.CURRENT_PROTOCOL : player.protocol);

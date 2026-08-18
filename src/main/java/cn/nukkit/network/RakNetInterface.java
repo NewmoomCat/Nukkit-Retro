@@ -388,7 +388,7 @@ public class RakNetInterface implements ServerInstance, AdvancedSourceInterface 
 
                 // Debug: log state for every 0xFE packet
                 if (Nukkit.DEBUG > 0) {
-                    this.server.getLogger().info("[RakNet] 0xFE packet from " + player.getAddress()
+                    this.server.getLogger().debug("[RakNet] 0xFE packet from " + player.getAddress()
                             + " packetId=0x" + Integer.toHexString(packetId)
                             + " protocol=" + player.protocol
                             + " useUncompressedBatch=" + player.useUncompressedBatch);

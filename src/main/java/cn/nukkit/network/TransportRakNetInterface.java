@@ -454,7 +454,7 @@ public class TransportRakNetInterface implements AdvancedSourceInterface {
                 int packetId = buffer[1] & 0xff;
 
                 if (Nukkit.DEBUG > 0) {
-                    this.server.getLogger().info("[RakNet] 0xFE packet from " + player.getAddress()
+                    this.server.getLogger().debug("[RakNet] 0xFE packet from " + player.getAddress()
                             + " packetId=0x" + Integer.toHexString(packetId)
                             + " protocol=" + player.protocol
                             + " useUncompressedBatch=" + player.useUncompressedBatch);
